@@ -1,0 +1,677 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+/*=============== BASE ===============*/
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: 0.2s linear;
+  transition: 0.3s ease;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #10221b;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+section {
+  padding: 5rem 9%;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid #10221b;
+  border-radius: 5rem;
+  color: #10221b;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+}
+
+.btn:hover {
+  background: #10221b;
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  color: #10221b;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*=============== HEADER STYLE START HERE ===============*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header.active {
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  margin-right: auto;
+  font-size: 2.5rem;
+  color: #10221b;
+  font-weight: bolder;
+}
+
+.header .logo i {
+  color: #219150;
+}
+
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: #10221b;
+}
+
+.header .navbar a:hover {
+  color: #219150;
+}
+
+.header .navbar #nav-close {
+  font-size: 5rem;
+  cursor: pointer;
+  color: #10221b;
+  display: none;
+}
+
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #10221b;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+  color: #219150;
+}
+
+.header #menu-btn {
+  display: none;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 10000;
+  -webkit-transform: translateY(-110%);
+  transform: translateY(-110%);
+}
+
+.search-form.active {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.search-form #close-search {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 6rem;
+}
+
+.search-form #close-search:hover {
+  color: #219150;
+}
+
+.search-form form {
+  width: 70rem;
+  margin: 0 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.search-form form input {
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: none;
+  background: none;
+  padding-right: 2rem;
+}
+
+.search-form form input::-webkit-input-placeholder {
+  color: #aaa;
+}
+
+.search-form form input:-ms-input-placeholder {
+  color: #aaa;
+}
+
+.search-form form input::-ms-input-placeholder {
+  color: #aaa;
+}
+
+.search-form form input::placeholder {
+  color: #aaa;
+}
+
+.search-form form label {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.search-form form label:hover {
+  color: #219150;
+}
+
+/*=============== HOME STYLE START HERE ===============*/
+.home {
+  padding: 0;
+}
+
+.home .box {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 2rem 9%;
+}
+
+.home .box.second {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.home .box .content {
+  width: 50rem;
+}
+
+.home .box .content span {
+  font-size: 4rem;
+  color: #10221b;
+}
+
+.home .box .content h3 {
+  font-size: 6rem;
+  color: #219150;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+
+.home .box .content p {
+  line-height: 2;
+  color: #10221b;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 3rem;
+  color: #10221b;
+}
+
+/*=============== ABOUT STYLE START HERE ===============*/
+
+.about-dess {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  grid-column-gap: 50px;
+}
+
+.about--video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.about--content {
+  position: relative;
+  bottom: 3.5rem;
+}
+
+.about--content h3 {
+  font-size: 4rem;
+  margin-top: 0.5rem;
+}
+.about--content span {
+  font-size: 2.5rem;
+  color: #219150;
+}
+
+.about--content p {
+  font-size: 1.5rem;
+  color: #10221b;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+
+.controls {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.controls span {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: #10221b;
+  cursor: pointer;
+  margin: 0.7rem;
+}
+
+.controls span:hover {
+  background: #219150;
+}
+/*=============== DESTINATION STYLE START HERE ===============*/
+
+.destinatin--des {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+
+  grid-gap: 1.5rem;
+}
+
+.destinatin--des .box {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.destinatin--des .box .image:hover img {
+  transform: scale(1.1);
+}
+
+.destinatin--des .box .image {
+  height: 20rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.destinatin--des .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.destinatin--des .box .content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.destinatin--des .box .content h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.destination span {
+  color: #219150;
+  font-size: 2.5rem;
+  display: grid;
+  justify-content: center;
+}
+
+.destinatin--des .box .content p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+
+.destinatin--des .box .content a {
+  font-size: 1.7rem;
+  color: #10221b;
+}
+
+.destinatin--des .box .content a:hover {
+  color: #219150;
+}
+
+.destinatin--des .box .content a:hover i {
+  padding-left: 1rem;
+  color: #219150;
+}
+
+/*=============== SERVICE STYLE START HERE ===============*/
+.services span {
+  color: #219150;
+  font-size: 2.5rem;
+  display: grid;
+  justify-content: center;
+}
+
+.service--des {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  text-align: center;
+  grid-gap: 1.5rem;
+}
+
+.service--des .box {
+  background: #eeeeee;
+  padding: 3rem;
+  border-radius: 1rem;
+  border: 1px solid #eeeeee;
+}
+
+.service--des .box:hover {
+  border: 1px solid #219150;
+}
+
+.service--des .box i {
+  font-size: 4rem;
+  color: #219150;
+  margin-bottom: 2rem;
+}
+
+.service--des .box h3 {
+  font-size: 2rem;
+  color: #10221b;
+}
+.service--des .box p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+
+/*=============== PACKAGE STYLE START HERE ===============*/
+.packages {
+  background: #eeeeee;
+}
+
+.Packages--des {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  background: #eeeeee;
+  grid-gap: 1.5rem;
+  text-align: center;
+}
+
+.packages span {
+  font-size: 2.5rem;
+  display: grid;
+  justify-content: center;
+  color: #219150;
+}
+
+.Packages--des .box {
+  background: #fff;
+  padding: 2rem;
+}
+.Packages--des .box .image {
+  overflow: hidden;
+  width: 100%;
+}
+
+.Packages--des .box .image img {
+  border-radius: 0.5rem;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.Packages--des .box .image:hover img {
+  transform: scale(-1.1, 1.1);
+}
+
+.Packages--des .box h3 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.Packages--des .box p {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+.Packages--des .box .price {
+  font-size: 1.8rem;
+  margin-top: 0.5rem;
+  color: #219150;
+}
+
+/*=============== REVIEW STYLE START HERE ===============*/
+.reviews span {
+  font-size: 2.5rem;
+  display: grid;
+  justify-content: center;
+  color: #219150;
+}
+
+.reviews--des {
+  text-align: center;
+}
+
+.reviews--des .user img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviews--des .info h3 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.reviews--des .info p {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+.reviews--des .info .start {
+  color: #219150;
+}
+
+/*=============== BLOG STYLE START HERE ===============*/
+.blogs {
+  background: #eeeeee;
+}
+
+.blogs span {
+  font-size: 2.5rem;
+  display: grid;
+  justify-content: center;
+  color: #219150;
+}
+
+.blog--des {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  background: #eeeeee;
+  grid-gap: 1.5rem;
+}
+
+.blog--des .slide {
+  background: #fff;
+  padding: 3rem;
+}
+
+.blog--des .slide img {
+  border-radius: 1rem;
+  display: block;
+}
+
+.blog--des .icons {
+  background: #10221b;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  position: relative;
+  bottom: 2.2rem;
+}
+.blog--des .icons i {
+  color: #219150;
+}
+.blog--des .icons a {
+  color: #fff;
+}
+
+.blog--des .slide h3 {
+  margin-top: 0.5rem;
+  font-size: 2rem;
+  color: #10221b;
+}
+
+.blog--des .slide p {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+
+/*=============== NEWSLETTER STYLE START HERE ===============*/
+
+.newsletter {
+  text-align: center;
+}
+
+.newsletter .content p {
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  line-height: 2;
+}
+
+.newsletter button {
+  position: relative;
+  bottom: 0.5rem;
+  display: inline-block;
+  border: 0.2rem solid #10221b;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  background: #10221b;
+}
+
+.newsletter button:hover {
+  background: #fff;
+  color: #10221b;
+}
+
+.clients {
+  text-align: center;
+}
+
+/*=============== FOOTER STYLE START HERE ===============*/
+
+.footer {
+  background: rgba(0, 0, 0, 0.1) url(../images/footer-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.box-container {
+  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-gap: 1.5rem;
+}
+.box-container .box h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #fff;
+}
+.box-container .box i {
+  color: #219150;
+  padding-right: 0.5rem;
+}
+
+.box-container .box a:hover i {
+  padding-right: 2rem;
+}
+
+.box-container .box a:hover {
+  color: #219150;
+}
+
+.credit {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
+}
+
+span {
+  color: #219150;
+}
